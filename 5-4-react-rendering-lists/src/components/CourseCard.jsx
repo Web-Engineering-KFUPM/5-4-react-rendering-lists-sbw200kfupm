@@ -44,6 +44,9 @@ export default function CourseCard({ course, index, onMutateCourse }) {
                 - onToggle={toggleTask}
                 - onDelete={deleteTask}
           */}
+          {
+            
+          }
         </ul>
       </section>
     </article>
