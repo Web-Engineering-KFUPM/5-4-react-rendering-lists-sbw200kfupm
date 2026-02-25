@@ -30,6 +30,12 @@ export default function CourseCard({ course, index, onMutateCourse }) {
             - course has tasks AND
             - all tasks are done
             Use logical && */}
+        { (course.tasks.length > 0) && (hasTasks && course.tasks.every(t => t.isDone)) && 
+            <p>All caught up</p> 
+        }
+  
+        {course.tasks.length === 0 && <p className="muted">No tasks yet.</p>}
+        
       </header>
 
       <section className="tasksSection">
@@ -52,6 +58,23 @@ export default function CourseCard({ course, index, onMutateCourse }) {
     </article>
   );
 }
+
+  // =========================================================
+  //  TASK 3 — Simple Conditional Rendering (ONLY &&)
+  //  Files: CourseCard.jsx, TaskItem.jsx, DueBadge.jsx
+  //  ---------------------------------------------------------
+  //  GOAL:
+  //  Practice logical && rendering.
+
+  //  CourseCard.jsx
+  //  1️ Show “All caught up” badge ONLY when:
+  //       - the course has tasks AND
+  //       - all tasks are done
+
+  //  2️ Show “No tasks yet.” ONLY when the course has NO tasks:
+  //       {course.tasks.length === 0 && <p className="muted">No tasks yet.</p>}
+
+
   //  =========================================================
   //  TASK 2 — Render Tasks for Each Course
   //  File: src/components/CourseCard.jsx
