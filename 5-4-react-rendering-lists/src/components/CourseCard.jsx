@@ -45,10 +45,28 @@ export default function CourseCard({ course, index, onMutateCourse }) {
                 - onDelete={deleteTask}
           */}
           {
-            
+            course.tasks.map(task => <TaskItem key={task.id} task={task} onToggle={toggleTask} onDelete={deleteTask}/>)
           }
         </ul>
       </section>
     </article>
   );
 }
+  //  =========================================================
+  //  TASK 2 — Render Tasks for Each Course
+  //  File: src/components/CourseCard.jsx
+  //  ---------------------------------------------------------
+  //  GOAL:
+  //  Inside each course card, display all its tasks using .map().
+
+  //  STEPS:
+  //  1️ Open CourseCard.jsx.
+  //  2️ Find:
+  //        <ul className="tasks">
+  //        → Write your code inside this list.
+  //  3️ Use course.tasks.map(...) and render <TaskItem /> for each task.
+  //  4️ Pass props:
+  //        - key={task.id}
+  //        - task={task}
+  //        - onToggle={toggleTask}
+  //        - onDelete={deleteTask}
