@@ -11,6 +11,7 @@ export default function CourseCard({ course, index, onMutateCourse }) {
 
   function toggleTask(id) {
     // TODO (TASK 4): toggle task.isDone for the task with matching id
+    
   }
 
   function deleteTask(id) {
@@ -58,6 +59,16 @@ export default function CourseCard({ course, index, onMutateCourse }) {
     </article>
   );
 }
+  //  =========================================================
+  //  TASK 4 — Interactivity (Toggle + Delete ONLY)
+  //  Files: CourseCard.jsx, TaskItem.jsx
+  //  ---------------------------------------------------------
+  //  GOAL:
+  //  Toggle and delete tasks using state updates.
+
+  //  CourseCard.jsx
+  //  1️ Implement toggleTask(id) using onMutateCourse + .map()
+  //  2️ Implement deleteTask(id) using onMutateCourse + .filter()
 
   // =========================================================
   //  TASK 3 — Simple Conditional Rendering (ONLY &&)
